@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="../js/eventListner.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/EmployeePayrollData.js"></script>
     <meta charset="UTF-8">
     <link href="https://fonts.gooleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap"rel="stylesheet">
     <title>Employee payroll form</title>
     <link rel = "stylesheet"href="C:\Users\praja\IdeaProjects\EmployeePayRollDay43\css\employee.css">
+    <link rel = "stylesheet"href="C:\Users\praja\IdeaProjects\EmployeePayRollDay43\css\home.css">
 </head>
 
 <body>
@@ -24,7 +28,9 @@
             <label class="label text" for="name">Name</label>
             <input class="input" type="text" id="name" name="name"
                 placeholder="Your name.." required>
+            <error-output class="text-error" for="text"></error-output>
         </div>
+        
     <div class="row-content">
         <label class="label text" for="profile">Profile image</label>
         <div class="profile-radio-content">
@@ -60,17 +66,17 @@
             </div>
         </div>
         <div class="row-content">
-            <label class="lable-text" for="department">Department</label>
-            <div >
-                <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
+            <label class="label text" for="department">Department</label>
+            <div>
+                <input class="checkbox" type="checkbox" id="hr" name="department" value="HR">
                 <label class="text" for="hr">HR</label>
-                <input class="checkbox" type="checkbox" id="sales" name="sales" value="Sales">
+                <input class="checkbox" type="checkbox" id="sales" name="department" value="Sales">
                 <label class="text" for="sales">Sales</label>
-                <input class="checkbox" type="checkbox" id="finance" name="finance" value="Finance">
+                <input class="checkbox" type="checkbox" id="finance" name="department" value="Finance">
                 <label class="text" for="finance">Finance</label>
-                <input class="checkbox" type="checkbox" id="engineer" name="engineer" value="Engineer">
-                <label class="text" for="engineer">Engineer</label>
-                <input class="checkbox" type="checkbox" id="others" name="others" value="Others">
+                <input class="checkbox" type="checkbox" id="engineer" name="department" value="Engineer">
+                <label class="text" for="er">Engineer</label>
+                <input class="checkbox" type="checkbox" id="others" name="department" value="Others">
                 <label class="text" for="others">Others</label>
             </div>
         </div>
@@ -80,9 +86,10 @@
             <output class="salary-output text" for="salary">400000</output>
         </div>
         <div class="row-content">
-            <label class="lable text" for="startDate">Start Date</label>
+            <label class="label text" for="startDate">Start Date</label>
             <div>
                 <select id="day" name="Day">
+                    <option>Day</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -116,19 +123,24 @@
                     <option value="31">31</option>
                 </select>
                 <select id="month" name="Month">
-                    <option value="Jan">January</option>
-                    <option value="Feb">Febuary</option>
-                    <option value="Mar">March</option>
-                    <option value="April">April</option>
-                    <option value="June">June</option>
-                    <option value="July">July</option>
-                    <option value="Aug">Augest</option>
-                    <option value="Sept">September</option>
-                    <option value="Oct">Octomber</option>
-                    <option value="Nov">November</option>
-                    <option value="Dec">December</option>
+                    <option>Month</option>
+                    <option value=1>January</option>
+                    <option value=2>February</option>
+                    <option value=3>March</option>
+                    <option value=4>April</option>
+                    <option value=5>May</option>
+                    <option value=6>June</option>
+                    <option value=7>July</option>
+                    <option value=8>August</option>
+                    <option value=9>September</option>
+                    <option value=10>October</option>
+                    <option value=11>November</option>
+                    <option value=12>December</option>
                 </select>
                 <select id="year" name="Year">
+                    <option>Year</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
                     <option value="2020">2020</option>
                     <option value="2019">2019</option>
                     <option value="2018">2018</option>
@@ -136,6 +148,7 @@
                     <option value="2016">2016</option>
                 </select>
             </div>
+            <error-output class="date-error" for="text"></error-output>
         </div>
         <div class="row-content">
             <label class="lable text" for="notes">Notes</label>
@@ -150,5 +163,6 @@
         </div>
         </form>
     </div>
+
 </body>
 </html>
