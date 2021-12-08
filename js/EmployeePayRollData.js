@@ -17,12 +17,12 @@ class EmployeePayrollData {
       else throw "Name is incorrect";
     }
   
-    get profilePic() {
-      return this._profilePic;
+    get profile1() {
+      return this._profile1;
     }
   
-    set profilePic(profilePic) {
-      this._profilePic = profilePic;
+    set profile(profile1) {
+      this._profile1 = profile1;
     }
   
     get gender() {
